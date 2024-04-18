@@ -23,6 +23,7 @@ namespace MazeGenerator
     {
         const int COLS = 20;
         const int ROWS = 20;
+        const int SCALE = 16; // pixel width and height of block
 
         public MainWindow()
         {
@@ -32,10 +33,10 @@ namespace MazeGenerator
         private void buttonGenerate_Click(object sender, RoutedEventArgs e)
         {
             var maze = MazeGen2.Generate(COLS, ROWS);
-            DrawMaze(maze, 16); // a node in the maze is 16x16 pixels
+            DrawMaze(maze, SCALE);
         }
 
-        private void DrawMaze(WallState[,] maze,int scale)
+        private void DrawMaze(WallState[,] maze, int scale)
         {
             myCanvas.Children.Clear();
             for (int y = 0; y < 20; y++)
