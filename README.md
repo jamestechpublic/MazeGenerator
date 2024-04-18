@@ -1,6 +1,7 @@
 # MAZE GENERATOR
-- Author: James
-- Resources: ![Maze Generating in Unity Tutorial](https://www.youtube.com/watch?v=ya1HyptE5uc&list=WL&index=3&t=255s)
+- Author: **James**
+- Created: Apr 2024
+- Resources: **Maze Generating in Unity Tutorial** (https://www.youtube.com/watch?v=ya1HyptE5uc&list=WL&index=3&t=255s)
 
 ## Summary
 A WPF C# project that generates a random recursive maze.
