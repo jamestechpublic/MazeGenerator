@@ -21,7 +21,8 @@ namespace MazeGenerator
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        const int COLS = 20;
+        const int ROWS = 20;
 
         public MainWindow()
         {
@@ -30,10 +31,8 @@ namespace MazeGenerator
 
         private void buttonGenerate_Click(object sender, RoutedEventArgs e)
         {
-            int cols = 20, rows = 20;
-            var maze = MazeGen2.Generate(cols, rows);
+            var maze = MazeGen2.Generate(COLS, ROWS);
             DrawMaze(maze, 16); // a node in the maze is 16x16 pixels
-            
         }
 
         private void DrawMaze(WallState[,] maze,int scale)
