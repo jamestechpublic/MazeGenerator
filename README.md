@@ -12,7 +12,11 @@ A WPF C# project that generates a random recursive maze.
 - Each node in the array contains WallStatus flags to indicate which of its four walls are enabled.
 
 ## Notes
-The WPF Canvas element draws the maze flipped horizontally 'cause 0,0 is at the bottom left.
+- The WPF Canvas element draws the maze flipped horizontally 'cause 0,0 is at the bottom left.
+- There is no start and end specified. Simply choose nodes, like in the corners, and disabled the appropriate wallstatus to open a wall.
+- The wall states are binary flags. Add and remove walls for a node as follows:
+  - maze[10,10] |= WallStatus.LEFT   // enables a wall
+  - maze[10,10] &= ~WallStatus.RIGHT  // disables a wall remember the not ~ infront to inverse the bits
 
 
 
